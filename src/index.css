@@ -1,0 +1,53 @@
+@import "tailwindcss";
+* {
+  /* margin: 0 20px; */
+  padding: 4px;
+  background-color: black;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#btn {
+  background-color: #000000;
+  border: 2px solid rebeccapurple;
+  color: rebeccapurple;
+  padding: 8px;
+  border-radius: 12px;
+}
+#btn:hover {
+  cursor: pointer;
+  background-color: rebeccapurple;
+  color: white;
+}
+#span {
+  color: rebeccapurple;
+  font-weight: bold;
+  padding: 0;
+}
+#links {
+  color: white;
+}
+#links:hover {
+  color: rebeccapurple;
+  text-decoration: underline;
+}
+#link {
+  font-size: larger;
+}
+#link:hover {
+  color: rebeccapurple;
+  font-weight: 400;
+}
+#sideNav {
+  background-color: aliceblue;
+}
+#closeBtn:hover {
+  color: rebeccapurple;
+}
+#sideNavLink:hover {
+  color: rebeccapurple;
+}
+html {
+  scroll-padding-top: 78px; /* height of your fixed navbar */
+  scroll-behavior: smooth;
+}
