@@ -44,14 +44,15 @@ const Content = () => {
           <h3 className="text-gray-600 text-lg lg:text-2xl font-semibold mt-3">
             The future of data and web based solutions is here...
           </h3>
-          <a href="contact.html" className="inline-block mt-8">
+          <a href="" className="inline-block mt-8  rounded-xl">
             <motion.button
               whileHover={{
-                scale: 1.05,
+                // scale: 1.05,
                 boxShadow: "0 0 12px rgba(102, 51, 153, 0.6)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 text-lg lg:text-2xl font-bold bg-rebeccapurple text-white rounded-lg shadow-lg transition"
+              id="btn"
+              className=" text-lg lg:text-2xl font-bold "
             >
               Contact Us
             </motion.button>

@@ -48,6 +48,6 @@
   color: rebeccapurple;
 }
 html {
-  scroll-padding-top: 78px; /* height of your fixed navbar */
+  scroll-padding-top: 90px; /* height of your fixed navbar */
   scroll-behavior: smooth;
 }

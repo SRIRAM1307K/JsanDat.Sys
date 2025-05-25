@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Logo */}
         <img
           id="cLogo"
-          className="w-40 sm:w-48 md:w-52"
+          className="w-40 sm:w-50 md:w-52 lg:w-62"
           src={logo}
           alt="Company Logo"
           draggable={false}
@@ -53,14 +53,17 @@ export default function Navbar() {
         {/* Desktop Nav Links */}
         <ul className="hidden lg:flex items-center gap-10 font-semibold text-xl md:text-2xl">
           <li>
-            <a href="#" className="hover:text-purple-700 transition-colors">
+            <a
+              href="#"
+              className="hover:text-purple-700 hover:underline transition-colors"
+            >
               Home
             </a>
           </li>
           <li>
             <a
               href="#services"
-              className="hover:text-purple-700 transition-colors"
+              className="hover:text-purple-700 hover:underline transition-colors"
             >
               Services
             </a>
@@ -68,7 +71,7 @@ export default function Navbar() {
           <li>
             <a
               href="#features"
-              className="hover:text-purple-700 transition-colors"
+              className="hover:text-purple-700 hover:underline transition-colors"
             >
               Features
             </a>
@@ -76,7 +79,7 @@ export default function Navbar() {
           <li>
             <a
               href="contact.html"
-              className="hover:text-purple-700 transition-colors"
+              className="hover:text-purple-700 hover:underline transition-colors"
             >
               Contact
             </a>
@@ -88,7 +91,7 @@ export default function Navbar() {
           <a href="contact.html" aria-label="Book a Demo">
             <button
               id="btn"
-              className="cursor-pointer px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 transition"
+              className="cursor-pointer px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 transition text-xl font-semibold"
             >
               Book a Demo
             </button>
