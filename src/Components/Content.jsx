@@ -44,7 +44,7 @@ const Content = () => {
           <h3 className="text-gray-600 text-lg lg:text-2xl font-semibold mt-3">
             The future of data and web based solutions is here...
           </h3>
-          <a href="" className="inline-block mt-8  rounded-xl">
+          {/* <a href="" className="inline-block mt-8  rounded-xl">
             <motion.button
               whileHover={{
                 // scale: 1.05,
@@ -56,7 +56,7 @@ const Content = () => {
             >
               Contact Us
             </motion.button>
-          </a>
+          </a> */}
         </div>
 
         {/* Cover Image */}

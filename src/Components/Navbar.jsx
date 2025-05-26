@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/Images/CompanyLogo/company logo black.png";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [sideNavOpen, setSideNavOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = sideNavOpen ? "hidden" : "";
@@ -13,6 +15,34 @@ export default function Navbar() {
       document.body.style.overflow = "";
     };
   }, [sideNavOpen]);
+
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    function onScroll() {
+      const servicesSection = document.getElementById("services");
+      const featuresSection = document.getElementById("features");
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+
+      if (featuresSection && scrollPos >= featuresSection.offsetTop) {
+        setActiveSection("features");
+      } else if (servicesSection && scrollPos >= servicesSection.offsetTop) {
+        setActiveSection("services");
+      } else {
+        setActiveSection("");
+      }
+    }
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [location.pathname]);
 
   const sideNavVariants = {
     hidden: { x: "-100%" },
@@ -26,6 +56,16 @@ export default function Navbar() {
     exit: { opacity: 0 },
   };
 
+  const activeClass = "text-[rebeccapurple] underline font-semibold";
+  const inactiveClass = "hover:text-[rebeccapurple] hover:underline";
+
+  const sectionLinkClass = (sectionId) =>
+    activeSection === sectionId ? activeClass : inactiveClass;
+
+  const isHomePage = location.pathname === "/";
+  const hideDemoButtonPages = ["/pricing", "/about", "/contact"];
+  const showBookDemo = !hideDemoButtonPages.includes(location.pathname);
+
   return (
     <>
       <nav
@@ -35,53 +75,105 @@ export default function Navbar() {
             "0 4px 6px -1px rgba(102, 51, 153, 0.6), 0 2px 4px -1px rgba(102, 51, 153, 0.4)",
         }}
       >
-        <img
-          id="cLogo"
-          className="w-40 sm:w-50 md:w-52 lg:w-62"
-          src={logo}
-          alt="Company Logo"
-          draggable={false}
-        />
+        <a href="/">
+          <img
+            id="cLogo"
+            className="w-40 sm:w-50 md:w-52 lg:w-62"
+            src={logo}
+            alt="Company Logo"
+            draggable={false}
+          />
+        </a>
 
-        <ul className="hidden lg:flex items-center gap-10 font-semibold text-xl md:text-2xl">
+        <ul
+          className={`hidden lg:flex items-center font-semibold text-xl md:text-2xl ${
+            isHomePage ? "gap-10" : "w-full justify-evenly"
+          }`}
+        >
           <li>
-            <Link to="/" className="hover:text-purple-700 hover:underline">
+            <NavLink
+              to="/"
+              end
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
+
           <li>
-            <a
-              href="#services"
-              className="hover:text-purple-700 hover:underline"
+            <NavLink
+              to="/pricing"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
             >
-              Services
-            </a>
+              Pricing
+            </NavLink>
           </li>
+
+          {isHomePage && (
+            <>
+              <li>
+                <a
+                  href="#services"
+                  className={sectionLinkClass("services")}
+                  onClick={() => setSideNavOpen(false)}
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  className={sectionLinkClass("features")}
+                  onClick={() => setSideNavOpen(false)}
+                >
+                  Features
+                </a>
+              </li>
+            </>
+          )}
+
           <li>
-            <a
-              href="#features"
-              className="hover:text-purple-700 hover:underline"
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
             >
-              Features
-            </a>
+              About
+            </NavLink>
           </li>
+
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="hover:text-purple-700 hover:underline"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
-        <div className="hidden lg:flex">
-          <Link to="/contact" aria-label="Book a Demo">
-            <button className="cursor-pointer px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 transition text-xl font-semibold">
-              Book a Demo
-            </button>
-          </Link>
-        </div>
+        {/* Book a Demo - Only show on selected pages */}
+        {showBookDemo && (
+          <div className="hidden lg:flex">
+            <NavLink to="/contact" aria-label="Book a Demo">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                id="btn"
+                className="text-lg lg:text-2xl font-bold"
+              >
+                Book a Demo
+              </motion.button>
+            </NavLink>
+          </div>
+        )}
 
         <div
           className="lg:hidden flex text-purple-700 text-4xl cursor-pointer z-50"
@@ -127,42 +219,94 @@ export default function Navbar() {
 
               <ul className="space-y-6 text-2xl text-center">
                 <li>
-                  <Link
+                  <NavLink
                     to="/"
-                    onClick={() => setSideNavOpen(false)}
-                    className="block hover:text-purple-700"
+                    end
+                    onClick={() => {
+                      setSideNavOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inactiveClass
+                    }
                   >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
+
                 <li>
-                  <a
-                    href="#services"
+                  <NavLink
+                    to="/pricing"
                     onClick={() => setSideNavOpen(false)}
-                    className="block hover:text-purple-700"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inactiveClass
+                    }
                   >
-                    Services
-                  </a>
+                    Pricing
+                  </NavLink>
                 </li>
+
+                {isHomePage && (
+                  <>
+                    <li>
+                      <a
+                        href="#services"
+                        onClick={() => setSideNavOpen(false)}
+                        className={sectionLinkClass("services")}
+                      >
+                        Services
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#features"
+                        onClick={() => setSideNavOpen(false)}
+                        className={sectionLinkClass("features")}
+                      >
+                        Features
+                      </a>
+                    </li>
+                  </>
+                )}
+
                 <li>
-                  <a
-                    href="#features"
+                  <NavLink
+                    to="/about"
                     onClick={() => setSideNavOpen(false)}
-                    className="block hover:text-purple-700"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inactiveClass
+                    }
                   >
-                    Features
-                  </a>
+                    About
+                  </NavLink>
                 </li>
+
                 <li>
-                  <Link
+                  <NavLink
                     to="/contact"
                     onClick={() => setSideNavOpen(false)}
-                    className="block hover:text-purple-700"
+                    className={({ isActive }) =>
+                      isActive ? activeClass : inactiveClass
+                    }
                   >
                     Contact
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
+
+              {/* Optional: Add mobile demo button if needed on other pages */}
+              {/* {showBookDemo && (
+                <div className="mt-8 flex justify-center">
+                  <NavLink to="/contact" onClick={() => setSideNavOpen(false)}>
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      className="text-xl font-bold px-4 py-2 border border-purple-700 text-purple-700 rounded-md"
+                    >
+                      Book a Demo
+                    </motion.button>
+                  </NavLink>
+                </div>
+              )} */}
             </motion.aside>
           </>
         )}

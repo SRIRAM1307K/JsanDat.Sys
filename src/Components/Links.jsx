@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const Links = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -31,7 +32,7 @@ const Links = () => {
     <section
       ref={ref}
       className="bg-gray-50 py-12 px-6 md:px-16 max-w-7xl mx-auto rounded-2xl border border-purple-200"
-      style={{ boxShadow: "0 12px 40px rgba(102, 51, 153, 0.7)" }} // bigger rebeccapurple shadow
+      style={{ boxShadow: "0 12px 40px rgba(102, 51, 153, 0.7)" }} // rebeccapurple shadow
     >
       <motion.div
         className="flex flex-col md:flex-row justify-around items-center md:items-start gap-12"
@@ -45,19 +46,31 @@ const Links = () => {
           variants={itemVariants}
         >
           <h1 className="text-3xl font-extrabold text-purple-700">Company</h1>
-          {["About", "Services", "Features", "Contact"].map((link, idx) => (
-            <motion.a
-              key={idx}
-              href={
-                link === "Contact" ? "contact.html" : `#${link.toLowerCase()}`
-              }
-              className="text-xl text-gray-700 hover:text-rebeccapurple hover:underline transition-transform duration-200"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {link}
-            </motion.a>
-          ))}
+
+          {["About", "Services", "Features", "Contact"].map((link, idx) =>
+            link === "About" ? (
+              <motion.div key={idx} variants={itemVariants}>
+                <Link
+                  to="/about"
+                  className="text-xl text-gray-700 hover:text-rebeccapurple hover:underline transition-transform duration-200"
+                >
+                  About
+                </Link>
+              </motion.div>
+            ) : (
+              <motion.a
+                key={idx}
+                href={
+                  link === "Contact" ? "/contact" : `#${link.toLowerCase()}`
+                }
+                className="text-xl text-gray-700 hover:text-rebeccapurple hover:underline transition-transform duration-200"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {link}
+              </motion.a>
+            )
+          )}
         </motion.div>
 
         {/* Address */}
@@ -110,7 +123,7 @@ const Links = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer"
-                whileHover={{ scale: 1.2, color: "#663399" }} // rebeccapurple hex
+                whileHover={{ scale: 1.2, color: "#663399" }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >

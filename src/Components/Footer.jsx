@@ -13,7 +13,7 @@ const Footer = () => {
       //   animation: "pulseShadow 3s ease-in-out infinite",
       // }}
     >
-      <div>
+      <div className="mt-5">
         &copy; Copyright JsanDat.Sys{" "}
         <span
           id="footerSpan"

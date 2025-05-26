@@ -38,12 +38,17 @@ const Maincontent = () => {
               The app development process includes creating installable
               applications and backend services, like API data access.
             </p>
-            <button
-              id="btn"
-              className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[#663399] text-white hover:bg-[#663399] hover:text-[#663399] cursor-pointer transition rounded-md"
+            <a
+              href="https://en.wikipedia.org/wiki/Mobile_app_development"
+              target="_blank"
             >
-              Learn More
-            </button>
+              <button
+                id="btn"
+                className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[#663399] text-white hover:bg-[#663399] hover:text-[#663399] cursor-pointer transition rounded-md"
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       ),
@@ -66,12 +71,14 @@ const Maincontent = () => {
               Categorize and label data for AI. Training data must be
               categorized and annotated for each use case.
             </p>
-            <button
-              id="btn"
-              className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[#663399] text-white hover:bg-[#663399] transition rounded-md"
-            >
-              Learn More
-            </button>
+            <a href="https://en.wikipedia.org/wiki/Annotation" target="_blank">
+              <button
+                id="btn"
+                className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[#663399] text-white hover:bg-[#663399] hover:text-[#663399] cursor-pointer transition rounded-md"
+              >
+                Learn More
+              </button>
+            </a>
           </div>
           <img
             src={annotate}
@@ -110,12 +117,17 @@ const Maincontent = () => {
               Static websites are served as-is. No runtime user-driven change
               unless redesigned by the admin.
             </p>
-            <button
-              id="btn"
-              className="mt-2 px-4 py-2 text-xl font-semibold  border-2 border-[#663399] text-white hover:bg-[#663399] transition rounded-md"
+            <a
+              href="https://en.wikipedia.org/wiki/Web_development"
+              target="_blank"
             >
-              Learn More
-            </button>
+              <button
+                id="btn"
+                className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[#663399] text-white hover:bg-[#663399] hover:text-[#663399] cursor-pointer transition rounded-md"
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       ),

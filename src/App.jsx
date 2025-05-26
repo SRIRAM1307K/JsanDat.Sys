@@ -8,6 +8,9 @@ import Changesection from "./Components/Changesection.jsx";
 import Links from "./Components/Links.jsx";
 import Footer from "./Components/Footer.jsx";
 import Contact from "./Components/Contact.jsx";
+import About from "./Components/About.jsx";
+import ScrollToTopButton from "./Components/ScrollToTopButton.jsx";
+import PricingPage from "./Components/Pricing.jsx";
 
 function App() {
   return (
@@ -26,12 +29,15 @@ function App() {
               <Changesection />
               <Links />
               <Footer />
+              <ScrollToTopButton />
             </>
           }
         />
 
         {/* Contact Route */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </>
   );

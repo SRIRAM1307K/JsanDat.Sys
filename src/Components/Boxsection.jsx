@@ -5,7 +5,7 @@ const Boxsection = () => {
   const boxes = [
     { count: "40+", label: "Completed Projects" },
     { count: "1+", label: "Ongoing Projects" },
-    { count: "2M+", label: "Objects Count" },
+    { count: "2M+", label: "Annotations Count" },
     { count: "2+", label: "Clients" },
   ];
 
