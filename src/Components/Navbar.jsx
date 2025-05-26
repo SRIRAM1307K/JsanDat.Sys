@@ -56,8 +56,8 @@ export default function Navbar() {
     exit: { opacity: 0 },
   };
 
-  const activeClass = "text-[rebeccapurple] underline font-semibold";
-  const inactiveClass = "hover:text-[rebeccapurple] hover:underline";
+  const activeClass = "text-[rebeccapurple]  font-semibold";
+  const inactiveClass = "hover:text-[rebeccapurple] ";
 
   const sectionLinkClass = (sectionId) =>
     activeSection === sectionId ? activeClass : inactiveClass;

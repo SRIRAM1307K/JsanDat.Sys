@@ -25,21 +25,23 @@ export default function PricingPage() {
             <ul className="pl-5 text-lg space-y-2">
               <li>Bounding Boxes: $0.02 – $0.05 per object</li>
               <li>Polygons: $0.04 – $0.15 per object</li>
-              <li>Semantic Segmentation: $0.04 – $0.50 per object</li>
+              <li>Semantic Segmentation: $0.04 – $0.50+ per object</li>
+              <li>Lidar 3D Point Cloud: $0.50 – $4 per object</li>
               <li>Key points: $0.010 – $0.15 per object</li>
               <li>Cuboids / 3D Boxes: $0.04 – $1.00 per object</li>
               <li>Text Entity Recognition: $0.015 – $0.03 per entity</li>
+              <li>Medical Image Annotation: $1 – $5+ per entity</li>
             </ul>
           </div>
 
           {/* Card 2 */}
           <div className="shadow-[4px_4px_6px_-1px_rgba(102,51,153,0.8)] rounded-lg p-6 transition duration-300 hover:shadow-[4px_6px_20px_rgba(102,51,153,0.8)] hover:scale-[1.02]">
             <h2 className="text-2xl font-bold mb-4 text-[rebeccapurple]">
-              Per-Unit or Per-Minute Pricing
+              Per-Frame or Per-Minute Pricing
             </h2>
             <ul className="pl-5 text-lg space-y-2">
               <li>Image Annotation: $0.01 – $4.00 per image</li>
-              <li>Video Annotation: $0.50 – $7.00 per minute</li>
+              <li>Video Annotation: $0.01 – $0.04 per frame</li>
               <li>Audio Annotation: $0.10 – $7.00 per minute</li>
             </ul>
           </div>
