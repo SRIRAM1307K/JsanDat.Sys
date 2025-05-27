@@ -18,7 +18,7 @@ export default function PricingPage() {
         {/* Price Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Card 1 */}
-          <div className="shadow-[4px_4px_6px_-1px_rgba(102,51,153,0.8)] rounded-lg p-6 transition duration-300 hover:shadow-[4px_6px_20px_rgba(102,51,153,0.8)] hover:scale-[1.02]">
+          <div className="shadow-[4px_4px_6px_-1px_#FE0000] rounded-lg p-6 transition duration-300 hover:shadow-[4px_4px_10px_#FE0000] hover:scale-[1.02]">
             <h2 className="text-2xl font-bold mb-4 text-[rebeccapurple]">
               Per Annotation Pricing
             </h2>
@@ -35,7 +35,7 @@ export default function PricingPage() {
           </div>
 
           {/* Card 2 */}
-          <div className="shadow-[4px_4px_6px_-1px_rgba(102,51,153,0.8)] rounded-lg p-6 transition duration-300 hover:shadow-[4px_6px_20px_rgba(102,51,153,0.8)] hover:scale-[1.02]">
+          <div className="shadow-[4px_4px_6px_-1px_#FE0000] rounded-lg p-6 transition duration-300 hover:shadow-[4px_4px_10px_#FE0000] hover:scale-[1.02]">
             <h2 className="text-2xl font-bold mb-4 text-[rebeccapurple]">
               Per-Frame or Per-Minute Pricing
             </h2>
@@ -47,7 +47,7 @@ export default function PricingPage() {
           </div>
 
           {/* Card 3 */}
-          <div className="shadow-[4px_4px_6px_-1px_rgba(102,51,153,0.8)] rounded-lg p-6 transition duration-300 hover:shadow-[4px_6px_20px_rgba(102,51,153,0.8)] hover:scale-[1.02]">
+          <div className="shadow-[4px_4px_6px_-1px_#FE0000] rounded-lg p-6 transition duration-300 hover:shadow-[4px_4px_10px_#FE0000] hover:scale-[1.02]">
             <h2 className="text-2xl font-bold mb-4 text-[rebeccapurple]">
               Hourly Rates
             </h2>

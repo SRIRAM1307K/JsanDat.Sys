@@ -41,7 +41,7 @@ export default function ScrollToTopButton() {
     right: isMobile ? "20px" : "40px",
     backgroundColor: "black",
     color: "rebeccapurple",
-    border: "2px solid rebeccapurple",
+    border: "2px solid #FE0000",
     padding: isMobile ? "10px" : "12px",
     borderRadius: "50%",
     cursor: "pointer",

@@ -18,7 +18,7 @@ const Boxsection = () => {
           {numberPart}
           <span
             style={{
-              color: "#663399", // rebeccapurple
+              color: "#FE0000", // rebeccapurple
               marginLeft: "0.1em",
               fontWeight: "bolder",
               background: "none",
@@ -52,9 +52,9 @@ const Boxsection = () => {
     <div
       className="bg-gray-900 mt-20 mb-20 p-12 mx-auto"
       style={{
-        boxShadow: "0 0 30px 2px rgba(102, 51, 153, 0.7)", // RebeccaPurple glow
+        boxShadow: "0 0 10px 4px #FE0000",
         borderRadius: "1rem",
-        maxWidth: "1200px",
+        maxWidth: "1200px", // rebeccapurple glow
       }}
     >
       <section className="flex flex-wrap justify-center gap-8 py-12">
@@ -69,7 +69,7 @@ const Boxsection = () => {
             className="flex-grow flex-shrink basis-[250px] max-w-[280px] 
               border border-rebeccapurple rounded-2xl 
               p-8 text-center text-white cursor-pointer 
-              shadow-lg hover:shadow-[0_0_20px_rgba(102,51,153,0.9)]
+              shadow-lg hover:shadow-[0_0_10px_#FE0000]
               hover:scale-105 transition-transform duration-300 ease-in-out"
           >
             <h1 className="text-5xl font-extrabold mb-3 tracking-wide">

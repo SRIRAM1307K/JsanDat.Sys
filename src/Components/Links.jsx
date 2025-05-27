@@ -31,8 +31,10 @@ const Links = () => {
   return (
     <section
       ref={ref}
-      className="bg-gray-50 py-12 px-6 md:px-16 max-w-7xl mx-auto rounded-2xl border border-purple-200"
-      style={{ boxShadow: "0 12px 40px rgba(102, 51, 153, 0.7)" }} // rebeccapurple shadow
+      className="bg-gray-50 mb-5 lg:mt-15 py-12 px-6 md:px-16 max-w-7xl mx-auto rounded-2xl"
+      style={{
+        boxShadow: "0 0 10px 4px #FE0000",
+      }} // rebeccapurple shadow
     >
       <motion.div
         className="flex flex-col md:flex-row justify-around items-center md:items-start gap-12"

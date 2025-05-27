@@ -9,18 +9,18 @@
 
 #btn {
   background-color: #000000;
-  border: 2px solid rebeccapurple;
-  color: rebeccapurple;
+  border: 2px solid #fe0000;
+  color: #fe0000;
   padding: 8px;
   border-radius: 12px;
 }
 #btn:hover {
   cursor: pointer;
-  background-color: rebeccapurple;
+  background-color: #fe0000;
   color: white;
 }
 #span {
-  color: rebeccapurple;
+  color: #fe0000;
   font-weight: bold;
   padding: 0;
 }
@@ -28,26 +28,26 @@
   color: white;
 }
 #links:hover {
-  color: rebeccapurple;
+  color: #fe0000;
   text-decoration: underline;
 }
 #link {
   font-size: larger;
 }
 #link:hover {
-  color: rebeccapurple;
+  color: #fe0000;
   font-weight: 400;
 }
 #sideNav {
   background-color: aliceblue;
 }
 #closeBtn:hover {
-  color: rebeccapurple;
+  color: #fe0000;
 }
 #sideNavLink:hover {
-  color: rebeccapurple;
+  color: #fe0000;
 }
 html {
-  scroll-padding-top: 90px; /* height of your fixed navbar */
+  scroll-padding-top: 100px; /* height of your fixed navbar */
   scroll-behavior: smooth;
 }

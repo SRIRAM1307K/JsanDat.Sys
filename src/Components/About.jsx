@@ -12,11 +12,11 @@ export default function About() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-6xl mx-auto my-16 p-8 md:p-12 bg-white rounded-3xl flex flex-col md:flex-row items-center gap-10"
         style={{
-          boxShadow: "0 0 30px 6px rgba(102, 51, 153, 0.6)", // rebeccapurple shadow
+          boxShadow: "0 0 10px 4px #FE0000", // rebeccapurple shadow
         }}
       >
         {/* Text Content */}
-        <div className="flex-1">
+        <div className="flex-1 rounded-2xl">
           <h2
             className="text-4xl font-extrabold mb-6 text-[rebeccapurple]"
             style={{ textShadow: "0 0 10px rgba(102, 51, 153, 0.8)" }}
@@ -41,8 +41,8 @@ export default function About() {
           </p>
 
           <blockquote
-            className="text-[rebeccapurple] text-xl font-semibold italic border-l-4 border-[rebeccapurple] pl-4"
-            style={{ textShadow: "0 0 8px rgba(102, 51, 153, 0.7)" }}
+            className="text-[rebeccapurple] text-xl font-semibold italic border-l-4 border-[#FE0000] pl-4"
+            style={{ textShadow: "0 0 2px #FE0000" }}
           >
             “Great Power Comes from Great Source”
           </blockquote>
