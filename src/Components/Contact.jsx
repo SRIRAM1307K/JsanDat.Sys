@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
-// import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,10 @@ export default function Contact() {
     description: "",
   });
 
+  useEffect(() => {
+    emailjs.init("fLoWxFwvzzktng25R"); // ✅ Initialize your EmailJS user ID once
+  }, []);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -19,30 +23,40 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = "your_service_id";
-    const templateID = "your_template_id";
-    const userID = "your_public_key";
-
     emailjs
-      .send(serviceID, templateID, formData, userID)
+      .send("service_erli3cf", "template_9mqi83m", {
+        to_email: "jsandatsys@datsys.in",
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        country: formData.country,
+        companyName: formData.companyName,
+        companyEmail: formData.companyEmail,
+        description: formData.description,
+      })
+
       .then(() => {
-        alert("Email sent successfully!");
+        alert("✅ Email sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          country: "",
+          companyName: "",
+          companyEmail: "",
+          description: "",
+        });
       })
       .catch((err) => {
-        console.error("Failed to send email:", err);
-        alert("Failed to send email.");
+        console.error("❌ Failed to send email:", err);
+        alert("Failed to send email. Check the console for details.");
       });
   };
 
   return (
     <div>
-      <div className="min-h-screen bg-[rebeccapurple] mt-5 flex justify-center items-center px-4 py-12">
+      <div className="min-h-screen bg-[rebeccapurple] mt-5 flex justify-center items-center px-10 py-12">
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-2xl p-10 w-full max-w-2xl space-y-6"
-          style={{
-            boxShadow: "0 0px 10px 4px rebeccapurple", // rebeccapurple shadow
-          }}
+          className="bg-white rounded-2xl p-20 w-full max-w-2xl space-y-6 shadow-[0_0px_25px_8px_rebeccapurple]"
         >
           <h2 className="text-3xl font-bold text-center text-[rebeccapurple]">
             Contact Us
@@ -58,10 +72,7 @@ export default function Contact() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full p-2 rounded border border-[rebeccapurple]"
-                style={{
-                  boxShadow: "0 0 8px 0 rebeccapurple",
-                }}
+                className="w-full p-2 rounded border border-[rebeccapurple] shadow-[0_0_8px_0_rebeccapurple]"
               />
             </div>
             <div>
@@ -73,10 +84,7 @@ export default function Contact() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full p-2 rounded border border-[rebeccapurple]"
-                style={{
-                  boxShadow: "0 0 8px 0 rebeccapurple",
-                }}
+                className="w-full p-2 rounded border border-[rebeccapurple] shadow-[0_0_8px_0_rebeccapurple]"
               />
             </div>
           </div>
@@ -90,10 +98,7 @@ export default function Contact() {
               value={formData.country}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded border border-[rebeccapurple]"
-              style={{
-                boxShadow: "0 0 8px 0 rebeccapurple",
-              }}
+              className="w-full p-2 rounded border border-[rebeccapurple] shadow-[0_0_8px_0_rebeccapurple]"
             >
               <option value="">Select your country</option>
               <option value="USA">USA</option>
@@ -112,10 +117,7 @@ export default function Contact() {
               value={formData.companyName}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded border border-[rebeccapurple]"
-              style={{
-                boxShadow: "0 0 8px 0 rebeccapurple",
-              }}
+              className="w-full p-2 rounded border border-[rebeccapurple] shadow-[0_0_8px_0_rebeccapurple]"
             />
           </div>
 
@@ -129,10 +131,7 @@ export default function Contact() {
               value={formData.companyEmail}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded border border-[rebeccapurple]"
-              style={{
-                boxShadow: "0 0 8px 0 rebeccapurple",
-              }}
+              className="w-full p-2 rounded border border-[rebeccapurple] shadow-[0_0_8px_0_rebeccapurple]"
             />
           </div>
 
@@ -146,17 +145,13 @@ export default function Contact() {
               onChange={handleChange}
               rows="4"
               required
-              className="w-full p-2 rounded border border-[rebeccapurple]"
-              style={{
-                boxShadow: "0 0 8px 0 rebeccapurple",
-              }}
+              className="w-full p-2 rounded border border-[rebeccapurple] shadow-[0_0_8px_0_rebeccapurple]"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-2 bg-[rebeccapurple] text-white font-semibold rounded hover:bg-purple-900 transition"
-            style={{ boxShadow: "0 0 10px 0 rebeccapurple" }}
+            className="w-full py-2 bg-[rebeccapurple] mb-4 text-white font-semibold rounded hover:bg-purple-900 transition shadow-[0_0_10px_0_rebeccapurple]"
           >
             Send Message
           </button>

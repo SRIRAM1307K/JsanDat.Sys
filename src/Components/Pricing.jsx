@@ -83,7 +83,7 @@ export default function PricingPage() {
           </ul>
           <p
             id="offer"
-            className="mt-4 font-bold text-2xl border text-center rounded-2xl p-4"
+            className="mt-4 font-bold text-2xl text-center rounded-2xl p-4 border shadow-[0px_0px_5px_4px_rebeccapurple] transition duration-300 hover:shadow-[0px_0px_5px_5px_rebeccapurple] hover:scale-[1.01] hover:text-[white]"
           >
             Special Offer Applies For 100k and above datasets. Contact us for
             more details.

@@ -52,5 +52,9 @@ html {
   scroll-behavior: smooth;
 }
 #offer {
-  box-shadow: 2px 0 2px 2px rebeccapurple;
+  color: rebeccapurple;
+}
+#offer:hover {
+  color: white;
+  cursor: pointer;
 }
