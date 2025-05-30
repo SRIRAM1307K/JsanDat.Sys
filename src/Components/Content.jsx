@@ -70,7 +70,7 @@ const Content = () => {
             src={Cover}
             alt="Cover Image"
             className="w-full max-w-[500px] h-auto object-contain drop-shadow-lg rounded-2xl lg:m-10"
-            style={{ filter: "drop-shadow(0 2px 5px #FE0000)" }}
+            style={{ filter: "drop-shadow(0 2px 5px rebeccapurple)" }}
           />
         </motion.div>
       </motion.div>
@@ -82,8 +82,8 @@ const Content = () => {
           width: "100%",
           height: "6px",
           borderRadius: "12px",
-          boxShadow: "0 0 5px 2px #FE0000",
-          backgroundColor: "#FE0000",
+          boxShadow: "0 0 5px 2px rebeccapurple",
+          backgroundColor: "rebeccapurple",
           maxWidth: "500px",
         }}
       />

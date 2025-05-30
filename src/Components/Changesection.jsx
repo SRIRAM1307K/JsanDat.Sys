@@ -34,7 +34,7 @@ const Changesection = () => {
           <div
             className="flex flex-col lg:flex-row items-center justify-center lg:gap-16 text-center bg-gray-900 rounded-xl max-w-7xl mx-auto shadow-xl"
             style={{
-              boxShadow: "0 0 10px 4px #FE0000", // rebeccapurple glow
+              boxShadow: "0 0 10px 4px rebeccapurple", // rebeccapurple glow
             }}
           >
             {/* Left Text + Buttons */}
@@ -65,7 +65,7 @@ const Changesection = () => {
                       onClick={() => setActiveType(typeKey)}
                       whileHover={{
                         scale: 1.1,
-                        boxShadow: "0 0 5px 2px #FE0000",
+                        boxShadow: "0 0 5px 2px rebeccapurple",
                       }}
                       whileTap={{ scale: 0.95 }}
                       className={`relative flex-grow basis-[100px] md:basis-[120px] lg:basis-[150px] 
@@ -74,8 +74,8 @@ const Changesection = () => {
                         transition-all duration-300
                         ${
                           isActive
-                            ? "bg-gradient-to-r from-red-500 via-red-600 to-red-700 text-white shadow-lg shadow-#FE0000"
-                            : "bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-purple-400 hover:text-white hover:bg-gradient-to-r hover:from-red-500 hover:via-red-600 hover:to-red-700 hover:shadow-lg hover:shadow-purple-700/50"
+                            ? "bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white shadow-lg shadow-rebeccapurple"
+                            : "bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-purple-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 hover:shadow-lg hover:shadow-purple-700/50"
                         }
                       `}
                       style={{
@@ -128,7 +128,7 @@ const Changesection = () => {
                   exit={{ opacity: 0, scale: 0.9, rotate: 2 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   className="rounded-xl w-full max-w-[600px] h-[220px] lg:h-[400px] object-cover shadow-2xl"
-                  style={{ boxShadow: "0 0 20px #FE0000" }}
+                  style={{ boxShadow: "0 0 20px rebeccapurple" }}
                   whileHover={{ scale: 1.04, rotate: 0 }}
                 />
               </AnimatePresence>
@@ -144,8 +144,8 @@ const Changesection = () => {
           width: "100%",
           height: "6px",
           borderRadius: "12px",
-          boxShadow: "0 0 5px 2px #FE0000",
-          backgroundColor: "#FE0000",
+          boxShadow: "0 0 5px 2px rebeccapurple",
+          backgroundColor: "rebeccapurple",
           maxWidth: "500px",
         }}
       />

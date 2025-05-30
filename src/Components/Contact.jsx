@@ -41,7 +41,7 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="bg-white rounded-2xl p-10 w-full max-w-2xl space-y-6"
           style={{
-            boxShadow: "0 0px 10px 4px #FE0000", // rebeccapurple shadow
+            boxShadow: "0 0px 10px 4px rebeccapurple", // rebeccapurple shadow
           }}
         >
           <h2 className="text-3xl font-bold text-center text-[rebeccapurple]">
@@ -58,9 +58,9 @@ export default function Contact() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full p-2 rounded border border-[#FE0000]"
+                className="w-full p-2 rounded border border-[rebeccapurple]"
                 style={{
-                  boxShadow: "0 0 8px 0 #FE0000",
+                  boxShadow: "0 0 8px 0 rebeccapurple",
                 }}
               />
             </div>
@@ -73,9 +73,9 @@ export default function Contact() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full p-2 rounded border border-[#FE0000]"
+                className="w-full p-2 rounded border border-[rebeccapurple]"
                 style={{
-                  boxShadow: "0 0 8px 0 #FE0000",
+                  boxShadow: "0 0 8px 0 rebeccapurple",
                 }}
               />
             </div>
@@ -90,9 +90,9 @@ export default function Contact() {
               value={formData.country}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded border border-[#FE0000]"
+              className="w-full p-2 rounded border border-[rebeccapurple]"
               style={{
-                boxShadow: "0 0 8px 0 #FE0000",
+                boxShadow: "0 0 8px 0 rebeccapurple",
               }}
             >
               <option value="">Select your country</option>
@@ -112,9 +112,9 @@ export default function Contact() {
               value={formData.companyName}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded border border-[#FE0000]"
+              className="w-full p-2 rounded border border-[rebeccapurple]"
               style={{
-                boxShadow: "0 0 8px 0 #FE0000",
+                boxShadow: "0 0 8px 0 rebeccapurple",
               }}
             />
           </div>
@@ -129,9 +129,9 @@ export default function Contact() {
               value={formData.companyEmail}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded border border-[#FE0000]"
+              className="w-full p-2 rounded border border-[rebeccapurple]"
               style={{
-                boxShadow: "0 0 8px 0 #FE0000",
+                boxShadow: "0 0 8px 0 rebeccapurple",
               }}
             />
           </div>
@@ -146,9 +146,9 @@ export default function Contact() {
               onChange={handleChange}
               rows="4"
               required
-              className="w-full p-2 rounded border border-[#FE0000]"
+              className="w-full p-2 rounded border border-[rebeccapurple]"
               style={{
-                boxShadow: "0 0 8px 0 #FE0000",
+                boxShadow: "0 0 8px 0 rebeccapurple",
               }}
             />
           </div>
@@ -156,7 +156,7 @@ export default function Contact() {
           <button
             type="submit"
             className="w-full py-2 bg-[rebeccapurple] text-white font-semibold rounded hover:bg-purple-900 transition"
-            style={{ boxShadow: "0 0 10px 0 #FE0000" }}
+            style={{ boxShadow: "0 0 10px 0 rebeccapurple" }}
           >
             Send Message
           </button>

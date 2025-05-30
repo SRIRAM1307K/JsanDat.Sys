@@ -17,9 +17,9 @@ const Maincontent = () => {
       content: (
         <div
           data-aos="fade-up"
-          className="flex flex-col lg:flex-row items-center gap-10 lg:mt-15 border-l-8 pl-6 border-[#FE0000]"
+          className="flex flex-col lg:flex-row items-center gap-10 lg:mt-15 border-l-8 pl-6 border-[rebeccapurple]"
           style={{
-            boxShadow: "0 0 10px #FE0000",
+            boxShadow: "0 0 10px rebeccapurple",
             borderRadius: "12px",
             padding: "1.5rem",
           }}
@@ -29,7 +29,7 @@ const Maincontent = () => {
             alt="App Development"
             className="w-full sm:w-4/5 lg:w-2/5 rounded-xl object-cover transition-transform duration-500 hover:scale-105 "
             style={{
-              boxShadow: "0 4px 10px #FE0000",
+              boxShadow: "0 4px 10px rebeccapurple",
             }}
           />
           <div className="w-full lg:w-1/2 text-center space-y-4">
@@ -44,7 +44,7 @@ const Maincontent = () => {
             >
               <button
                 id="btn"
-                className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[#FE0000] text-white hover:bg-[#FE0000] hover:text-[#FE0000] cursor-pointer transition rounded-md"
+                className="mt-2 px-4 py-2 text-xl font-semibold border-2 border-[rebeccapurple] text-white hover:bg-[rebeccapurple] hover:text-[rebeccapurple] cursor-pointer transition rounded-md"
               >
                 Learn More
               </button>
@@ -58,9 +58,9 @@ const Maincontent = () => {
       content: (
         <div
           data-aos="fade-up"
-          className="flex flex-col-reverse lg:flex-row items-center gap-10 border-l-8 pl-6 border-[#FE0000]"
+          className="flex flex-col-reverse lg:flex-row items-center gap-10 border-l-8 pl-6 border-[rebeccapurple]"
           style={{
-            boxShadow: "0 0 10px #FE0000",
+            boxShadow: "0 0 10px rebeccapurple",
             borderRadius: "12px",
             padding: "1.5rem",
           }}
@@ -85,7 +85,7 @@ const Maincontent = () => {
             alt="Annotation Solutions"
             className="w-full sm:w-4/5 lg:w-2/5 rounded-xl object-cover transition-transform duration-500 hover:scale-105"
             style={{
-              boxShadow: "0 4px 10px #FE0000",
+              boxShadow: "0 4px 10px rebeccapurple",
             }}
           />
         </div>
@@ -96,9 +96,9 @@ const Maincontent = () => {
       content: (
         <div
           data-aos="fade-up"
-          className="flex flex-col lg:flex-row items-center gap-10 border-l-8 pl-6 border-[#FE0000]"
+          className="flex flex-col lg:flex-row items-center gap-10 border-l-8 pl-6 border-[rebeccapurple]"
           style={{
-            boxShadow: "0 0 10px #FE0000",
+            boxShadow: "0 0 10px rebeccapurple",
             borderRadius: "12px",
             padding: "1.5rem",
           }}
@@ -108,7 +108,7 @@ const Maincontent = () => {
             alt="Web Development"
             className="w-full sm:w-4/5 lg:w-2/5 rounded-xl object-cover transition-transform duration-500 hover:scale-105"
             style={{
-              boxShadow: "0 4px 10px #FE0000",
+              boxShadow: "0 4px 10px rebeccapurple",
             }}
           />
           <div className="w-full lg:w-1/2 text-center space-y-4">

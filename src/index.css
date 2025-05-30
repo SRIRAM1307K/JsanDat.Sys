@@ -9,18 +9,18 @@
 
 #btn {
   background-color: #000000;
-  border: 2px solid #fe0000;
-  color: #fe0000;
+  border: 2px solid rebeccapurple;
+  color: rebeccapurple;
   padding: 8px;
   border-radius: 12px;
 }
 #btn:hover {
   cursor: pointer;
-  background-color: #fe0000;
+  background-color: rebeccapurple;
   color: white;
 }
 #span {
-  color: #fe0000;
+  color: rebeccapurple;
   font-weight: bold;
   padding: 0;
 }
@@ -28,26 +28,29 @@
   color: white;
 }
 #links:hover {
-  color: #fe0000;
+  color: rebeccapurple;
   text-decoration: underline;
 }
 #link {
   font-size: larger;
 }
 #link:hover {
-  color: #fe0000;
+  color: rebeccapurple;
   font-weight: 400;
 }
 #sideNav {
   background-color: aliceblue;
 }
 #closeBtn:hover {
-  color: #fe0000;
+  color: rebeccapurple;
 }
 #sideNavLink:hover {
-  color: #fe0000;
+  color: rebeccapurple;
 }
 html {
   scroll-padding-top: 100px; /* height of your fixed navbar */
   scroll-behavior: smooth;
+}
+#offer {
+  box-shadow: 2px 0 2px 2px rebeccapurple;
 }

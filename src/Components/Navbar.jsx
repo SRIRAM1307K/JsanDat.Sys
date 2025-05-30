@@ -71,7 +71,7 @@ export default function Navbar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 bg-white flex justify-between items-center px-4 py-2 shadow-md"
         style={{
-          boxShadow: "0 4px 6px -1px #FE0000",
+          boxShadow: "0 4px 6px -1px rebeccapurple",
         }}
       >
         <a href="/">

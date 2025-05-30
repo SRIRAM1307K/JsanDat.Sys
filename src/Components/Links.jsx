@@ -33,7 +33,7 @@ const Links = () => {
       ref={ref}
       className="bg-gray-50 mb-5 lg:mt-15 py-12 px-6 md:px-16 max-w-7xl mx-auto rounded-2xl"
       style={{
-        boxShadow: "0 0 10px 4px #FE0000",
+        boxShadow: "0 0 10px 4px rebeccapurple",
       }} // rebeccapurple shadow
     >
       <motion.div
