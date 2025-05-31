@@ -1,16 +1,47 @@
-<<<<<<< HEAD
-# JsanDat.Sys
-=======
-# React + Vite
+# 📘 My Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website with interactive features including dynamic navigation, a "Book a Demo" contact system, and smooth user experience enhancements.
 
-Currently, two official plugins are available:
+## 🌐 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Navigation Bar**
+  - Adapts to all screen sizes (desktop, tablet, mobile)
+  - Smooth scrolling and active state highlighting
 
-## Expanding the ESLint configuration
+- **Main Content with Sidebar**
+  - Central content with side sections for extra context or navigation
+  - Clean and flexible layout for articles, product details, or information
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 4bdeaf2 (First)
+- **Dynamic "Book a Demo" Page**
+  - Interactive form to collect user information
+  - Form validation and dynamic handling (e.g., showing a success message or redirect)
+  - Customizable fields: name, email, company, description, etc.
+
+- **Dynamic Button and Image Interaction**
+  - Buttons that change content/images on click
+  - Suitable for feature switching, gallery, or product display
+
+- **Back to Top Button**
+  - Scrolls the page smoothly back to the top
+  - Appears after scrolling down for better UX
+
+- **Footer Section**
+  - Responsive and informative
+  - Includes links, copyright, and contact
+
+## 🧱 Built With
+
+- HTML5 & CSS3
+- JavaScript (vanilla or framework like React, depending on your implementation)
+- Responsive Web Design principles
+- Optional: React, Tailwind CSS, EmailJS (for contact form)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (for development with frameworks like React)
+- npm or yarn
+
