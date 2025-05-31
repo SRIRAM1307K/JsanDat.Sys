@@ -1,4 +1,10 @@
-import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaEnvelope,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
@@ -101,6 +107,11 @@ const Links = () => {
                 icon: <FaEnvelope />,
                 url: "mailto:jsandatsys@datsys.in",
                 label: "Email",
+              },
+              {
+                icon: <FaLinkedinIn />,
+                url: "https://www.linkedin.com/in/dat-sys-b35967238/",
+                label: "LinkedIn",
               },
               {
                 icon: <FaInstagram />,
